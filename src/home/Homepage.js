@@ -23,7 +23,6 @@ function Homepage(props) {
             })
 
     }, []);
-    // console.log(userdatas)
     return (
         <div className="App d-flex">
 
@@ -38,7 +37,7 @@ function Homepage(props) {
                         
 
                    
-                    <div onClick={() => setActive('task')} className={(active == 'task') ? 'active' : ''}><p>My Tasks</p></div>
+                    <div onClick={() => setActive('task')} className={(active === 'task') ? 'active' : ''}><p>My Tasks</p></div>
                     <div><p>Estate Management</p></div>
                         
                         <p>Services & incidents</p>
@@ -61,7 +60,7 @@ function Homepage(props) {
 
                         </div>
                         <div className='image'>
-                            <img src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fHBvcnRyYWl0fGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80' />
+                            <img src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fHBvcnRyYWl0fGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80' alt="profile" />
                         </div>
 
                     </div>

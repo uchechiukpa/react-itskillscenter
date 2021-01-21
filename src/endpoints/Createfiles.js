@@ -2,17 +2,12 @@ import React, { useState } from 'react';
 import axios from 'axios'
 
 function Createfile(props) {
-    const [Note, setNote] = useState({ note: ''})
-
-
-    const handleChange = e => {
-        setNote({[e.target.name]: e.target.value })
-    }
+    const [Note, setNote] = useState({ note: '' })
+    
     const uploadfiles = async (e) => {
         e.preventDefault();
         axios.post('https://note-crud-app-itcenterskills.herokuapp.com/notes/', Note)
             .then(async function (res) {
-                // history.push(`/OneUserProfile/${res.data.name_id}`)
 
             })
             .catch(err => {
@@ -21,20 +16,6 @@ function Createfile(props) {
 
     }
     return (
-        // <div className = 'd-flex d-flex-row justify-content-center align-content-center'>
-
-
-        // </div>
-        // <form>
-        //     <div className='d-flex justify-content-center'>
-        //         <div className="d-flex flex-column ">
-
-        //             <input type='text' />
-        //             <button  >submit</button>
-                 
-        //         </div>
-        //     </div>
-        // </form>
         <div class="container">
             <div class="row">
                 <form role="form" id="contact-form" class="contact-form">
@@ -51,7 +32,7 @@ function Createfile(props) {
                             <div class="row">
                                 <div class="col-md-12">
                                 <button type="submit" onClick={uploadfiles} class="btn main-btn pull-right">Post a Note</button>
-                                </div>
+                            </div>
                         </div>
                     </div>
                 </form>

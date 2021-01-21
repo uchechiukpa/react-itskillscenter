@@ -11,13 +11,13 @@ function Editfile({ match }) {
         axios.get(`https://note-crud-app-itcenterskills.herokuapp.com/notes/${match.params.id}/`)
             .then(res => {
                 setNote(res.data)
-                // console.log(res.data)
             })
             .catch(err => {
                 console.log(err, "failed");
 
             })
     }, []);
+    
     const handleEdit = async (e) => {
         e.preventDefault();
         await axios.put(`https://note-crud-app-itcenterskills.herokuapp.com/notes/${match.params.id}/`, note)
@@ -31,10 +31,6 @@ function Editfile({ match }) {
     }
 
     return (
-        // <div>
-        //     <input type='text' value={note.note} onChange={e => setNote({note: e.target.value })} />
-        //     <button onClick={handleEdit} >submit</button>
-        // </div>
         <div class="container">
             <div class="row">
                 <form role="form" id="contact-form" class="contact-form">
