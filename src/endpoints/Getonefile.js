@@ -17,7 +17,7 @@ function GetOneFile({ match }) {
 
             })
         
-    }, []);
+    }, [match.params.id]);
     return (
         <div>
             <h1>{note.note}</h1>

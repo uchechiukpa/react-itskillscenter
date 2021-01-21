@@ -16,8 +16,8 @@ function Editfile({ match }) {
                 console.log(err, "failed");
 
             })
-    }, []);
-    
+    }, [match.params.id]);
+
     const handleEdit = async (e) => {
         e.preventDefault();
         await axios.put(`https://note-crud-app-itcenterskills.herokuapp.com/notes/${match.params.id}/`, note)
@@ -33,7 +33,7 @@ function Editfile({ match }) {
     return (
         <div class="container">
             <div class="row">
-                <form role="form" id="contact-form" class="contact-form">
+                <form id="contact-form" class="contact-form">
                     <div class="row">
 
 
