@@ -16,7 +16,7 @@ function GetOneFile({ match }) {
                 console.log(err, "failed ");
 
             })
-        { match.params.id }
+        
     }, []);
     return (
         <div>
