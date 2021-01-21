@@ -75,7 +75,12 @@ function Homepage(props) {
 
                 <div className='note-button d-flex justify-content-around mt-3 '>
                    
-                    <button ><a href='/createfile'>New Note</a></button>
+                    
+                        <Link to={'/createfile'}>
+                        <button> New Note</button>
+                        </Link>
+                        
+                    
                     <p>new per page</p>
                     <p>search page</p>
                 </div>
